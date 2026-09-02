@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicita más información</title>
+    <title>Cargando...</title>
 
   <!-- Meta Pixel Code -->
 <script>
@@ -32,7 +32,6 @@ src="https://www.facebook.com/tr?id=2192722984920622&ev=PageView&noscript=1"
             --card-border: rgba(255, 255, 255, 0.11);
             --text-primary: #ffffff;
             --text-secondary: rgba(255, 255, 255, 0.68);
-            --text-muted: rgba(255, 255, 255, 0.45);
             --brand-primary: #a493ed;
             --btn-text: #171622;
         }
@@ -58,28 +57,10 @@ src="https://www.facebook.com/tr?id=2192722984920622&ev=PageView&noscript=1"
             padding: 22px;
         }
 
-        /* ESTRELLA Y TARJETA */
-
         .pagina {
             width: 100%;
             max-width: 470px;
             text-align: center;
-            animation: aparecer 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .marca {
-            width: 64px;
-            height: 64px;
-            margin: 0 auto 25px;
-            border-radius: 19px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #eeeaff, var(--brand-primary));
-            color: var(--btn-text);
-            font-size: 28px;
-            font-weight: 700;
-            box-shadow: 0 12px 35px rgba(120, 100, 200, 0.25);
         }
 
         .tarjeta {
@@ -92,26 +73,7 @@ src="https://www.facebook.com/tr?id=2192722984920622&ev=PageView&noscript=1"
             box-shadow: 0 25px 70px rgba(0, 0, 0, 0.38);
         }
 
-        h1 {
-            margin-bottom: 14px;
-            font-size: clamp(28px, 7vw, 36px);
-            line-height: 1.15;
-            letter-spacing: -0.8px;
-            font-weight: 700;
-        }
-
-        .descripcion {
-            max-width: 350px;
-            margin: 0 auto 30px;
-            color: var(--text-secondary);
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* BOTÓN INTERACTIVO */
-
         .boton {
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -125,167 +87,36 @@ src="https://www.facebook.com/tr?id=2192722984920622&ev=PageView&noscript=1"
             text-decoration: none;
             font-size: 16px;
             font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
-        }
-
-        .boton:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.32);
-            filter: brightness(1.04);
-        }
-
-        .boton:active {
-            transform: scale(0.98);
-        }
-
-        .icono {
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--btn-text);
-            color: var(--text-primary);
-            font-size: 14px;
-        }
-
-        .confianza {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 7px;
-            margin-top: 21px;
-            color: var(--text-muted);
-            font-size: 12px;
-        }
-
-        .punto {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #a995ff;
-        }
-
-        /* ESTADO DE CARGA */
-
-        .procesando {
-            opacity: 0.65;
-            pointer-events: none;
-            cursor: wait;
-        }
-
-        /* ANIMACIÓN */
-
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ADAPTACIÓN MÓVIL */
-
-        @media (max-width: 480px) {
-            body {
-                padding: 18px;
-            }
-            .tarjeta {
-                padding: 36px 22px 30px;
-                border-radius: 21px;
-            }
-            .marca {
-                width: 56px;
-                height: 56px;
-                border-radius: 16px;
-            }
-            .descripcion {
-                font-size: 15px;
-            }
-            .boton {
-                padding: 16px;
-            }
         }
     </style>
+
+    <!-- REDIRECCIÓN E INFORME DE EVENTO INMEDIATO -->
+    <script>
+        (function() {
+            var destino = "https://wa.me/525635121377?text=Solicito%20más%20información";
+            var eventID = 'contact_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+
+            // Registrar evento de Pixel
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact', {}, { eventID: eventID });
+            }
+
+            // Redirigir de inmediato
+            window.location.replace(destino);
+        })();
+    </script>
 </head>
 
 <body>
 
     <main class="pagina">
-
-        <div class="marca" aria-hidden="true">✦</div>
-
         <section class="tarjeta">
-            <h1>Solicita más información ahora mismo</h1>
-
-            <p class="descripcion">
-    <span style="display: block; margin-bottom: 12px; font-weight: bold;">
-        ¿QUIERES SABER CON QUIÉN PLATICA TU PAREJA?
-    </span>
-    <span style="display: block;">
-        Da clic al botón y comunícate por WhatsApp
-    </span>
-</p>
-
-
-            <a id="boton-contacto" class="boton" href="https://wa.me/525635121377?text=Solicito%20más%20información" target="_blank" rel="noopener noreferrer">
-                <span class="icono" aria-hidden="true">→</span>
-                <span>Quiero más información</span>
+            <p style="margin-bottom: 20px; color: var(--text-secondary);">Abriendo WhatsApp...</p>
+            <a id="boton-contacto" class="boton" href="https://wa.me/525635121377?text=Solicito%20más%20información">
+                <span>Haz clic aquí si no abre automáticamente</span>
             </a>
-
-            <div class="confianza">
-                <span class="punto" aria-hidden="true"></span>
-                Atención directa
-            </div>
         </section>
-
     </main>
 
-    <!-- REGISTRO DE EVENTO Y REDIRECCIÓN -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const boton = document.getElementById('boton-contacto');
-
-            if (!boton) return;
-
-            boton.addEventListener('click', function(event) {
-                event.preventDefault();
-
-                if (boton.classList.contains('procesando')) return;
-                boton.classList.add('procesando');
-
-                const destino = boton.href;
-                const target = boton.target || '_self';
-                const eventID = 'contact_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
-
-                // Tracking de Meta Pixel con fallback seguro
-                if (typeof fbq === 'function') {
-                    fbq('track', 'Contact', {}, { eventID: eventID });
-                }
-
-                // Redirección optimizada a 300ms manteniendo la navegación original
-                setTimeout(function() {
-                    if (target === '_blank') {
-                        window.open(destino, '_blank', 'noopener,noreferrer');
-                    } else {
-                        window.location.href = destino;
-                    }
-                    
-                    // Restablecer estado por si el usuario regresa a la pestaña original
-                    setTimeout(function() {
-                        boton.classList.remove('procesando');
-                    }, 1000);
-                }, 300);
-            });
-        });
-    </script>
-
 </body>
-</html>
 </html>
